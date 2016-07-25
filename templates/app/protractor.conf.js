@@ -3,6 +3,9 @@
 
 'use strict';
 
+process.env.SAUCE_USERNAME = false;
+process.env.SAUCE_ACCESS_KEY = false;
+
 var config = {
   // The timeout for each script run on the browser. This should be longer
   // than the maximum time your application needs to stabilize between tasks.
