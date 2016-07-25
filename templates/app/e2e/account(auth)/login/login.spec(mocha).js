@@ -59,9 +59,8 @@ describe('Login View', function() {
       return page.login(testUser).then(() => {
         var navbar = require('../../components/navbar/navbar.po');
 
-          <%= expect() %>browser.getCurrentUrl()<%= to() %>.eventually.equal(config.baseUrl + '/');
-          <%= expect() %>navbar.navbarAccountGreeting.getText()<%= to() %>.eventually.equal('Hello ' + testUser.name);
-        });
+        <%= expect() %>browser.getCurrentUrl()<%= to() %>.eventually.equal(config.baseUrl + '/');
+        <%= expect() %>navbar.navbarAccountGreeting.getText()<%= to() %>.eventually.equal('Hello ' + testUser.name);
       });
     });
 
