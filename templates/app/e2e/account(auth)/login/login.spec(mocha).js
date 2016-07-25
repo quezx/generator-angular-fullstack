@@ -59,12 +59,6 @@ describe('Login View', function() {
       return page.login(testUser).then(() => {
         var navbar = require('../../components/navbar/navbar.po');
 
-        return browser.wait(
-          () => element(by.css('.hero-unit')),
-          5000,
-          `Didn't find .hero-unit after 5s`
-        ).then(() => {
-          browser.ignoreSynchronization = true;
           <%= expect() %>browser.getCurrentUrl()<%= to() %>.eventually.equal(config.baseUrl + '/');
           <%= expect() %>navbar.navbarAccountGreeting.getText()<%= to() %>.eventually.equal('Hello ' + testUser.name);
         });
