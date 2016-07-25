@@ -60,6 +60,7 @@ describe('Login View', function() {
         var navbar = require('../../components/navbar/navbar.po');
 
         return browser.wait(
+          browser.ignoreSynchronization = true;
           () => element(by.css('.hero-unit')),
           5000,
           `Didn't find .hero-unit after 5s`
